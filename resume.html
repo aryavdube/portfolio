@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Resume · Aryav Dube</title>
+  <meta name="description" content="Aryav Dube's interactive resume: special education, software engineering, and AI research. Hover any item for role, timeline, and links.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,600,700,800&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./resume.css">
+  <script src="./app.js" defer></script>
+  <script src="./resume.js" defer></script>
+</head>
+<body class="resume-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./index.html" aria-label="Aryav Dube, home">
+        <svg class="brand-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true"><path d="M5 32 19 8h5l14 24h-7L21.5 15 12 32H5Z" fill="currentColor"/><path d="M15 27h13" stroke="currentColor" stroke-width="3"/></svg>
+        <span>ARYAV DUBE<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Resume navigation">
+        <a href="./index.html">← Portfolio</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#honors">Honors</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" title="Toggle color theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+        <a class="header-contact" href="./index.html#contact">Let's connect <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="rz-hero shell">
+      <div class="rz-hero-top"><span class="eyebrow"><span class="status-dot"></span> Interactive resume · updated Sep 2026</span><span class="rz-hint-key"><kbd>Hover</kbd> or <kbd>tap</kbd> anything marked <i class="rz-dotmark"></i></span></div>
+      <div class="rz-hero-grid">
+        <div>
+          <h1 class="rz-title">Special ed.<br><span>Software.</span><br><em>Research.</em></h1>
+        </div>
+        <aside class="rz-id-card">
+          <div class="rz-id-head"><img src="./ucla-logo.png" alt="UCLA logo" width="1048" height="398"><span>CLASS OF 2029</span></div>
+          <strong>Aryav Dube</strong>
+          <p>Linguistics + Computer Science at UCLA. I build accessible technology and study how AI can help people communicate.</p>
+          <dl>
+            <div><dt>Based</dt><dd>Bay Area ↔ Los Angeles</dd></div>
+            <div><dt>Stack</dt><dd>JS · Python · Java · MySQL · NLP</dd></div>
+            <div><dt>Contact</dt><dd><a href="mailto:adube08@ucla.edu">adube08@ucla.edu</a></dd></div>
+          </dl>
+          <div class="rz-id-links"><a href="https://www.linkedin.com/in/aryav-dube/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="./index.html#work">Projects ↗</a></div>
+        </aside>
+      </div>
+      <dl class="rz-kpis" data-kpis></dl>
+    </section>
+
+    <section class="rz-section shell" id="timeline" aria-labelledby="tl-title">
+      <div class="rz-section-head">
+        <div><p class="section-kicker">01 / THE TIMELINE</p><h2 id="tl-title">Four tracks, one thread<span class="accent-dot">.</span></h2></div>
+        <div class="rz-filters" role="group" aria-label="Filter by track" data-filters>
+          <button type="button" class="is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="sped" aria-pressed="false"><i class="c-sped"></i>Special ed</button>
+          <button type="button" data-filter="tech" aria-pressed="false"><i class="c-tech"></i>Engineering</button>
+          <button type="button" data-filter="research" aria-pressed="false"><i class="c-research"></i>Research</button>
+          <button type="button" data-filter="lead" aria-pressed="false"><i class="c-lead"></i>Leadership</button>
+        </div>
+      </div>
+      <div class="rz-gantt" data-gantt>
+        <div class="rz-years" data-years aria-hidden="true"></div>
+        <div class="rz-rows" data-rows></div>
+        <div class="rz-now" data-now aria-hidden="true"><span>NOW</span></div>
+      </div>
+      <p class="rz-note">Each bar marks when the role ran. Hover a bar for details; click it to open the full card.</p>
+    </section>
+
+    <section class="rz-section shell" aria-labelledby="exp-title">
+      <div class="rz-section-head"><div><p class="section-kicker">02 / THE WORK</p><h2 id="exp-title">What I did, in detail<span class="accent-dot">.</span></h2></div><p class="rz-lede">These are the highlights I picked from both resumes. Hover a card for my role, dates, results, and links.</p></div>
+      <div class="rz-cards" data-cards></div>
+    </section>
+
+    <section class="rz-section shell rz-split" aria-labelledby="skills-title">
+      <div>
+        <p class="section-kicker">03 / TOOLKIT</p><h2 id="skills-title">Skills, and where<br>I used them<span class="accent-dot">.</span></h2>
+        <p class="rz-lede">Hover a skill to see which projects used it. The matching timeline bars will light up too.</p>
+      </div>
+      <div class="rz-skills" data-skills></div>
+    </section>
+
+    <section class="rz-section shell" id="honors" aria-labelledby="honors-title">
+      <div class="rz-section-head"><div><p class="section-kicker">04 / HONORS & PUBLICATION</p><h2 id="honors-title">Recognition<span class="accent-dot">.</span></h2></div></div>
+      <a class="rz-paper" data-tip="paper" href="https://www.vanderbilt.edu/youngscientistjournal/article/enhancing-aac-systems-through-artificial-intelligence-parent-and-family-perspective-on-limitations-and-solutions/" target="_blank" rel="noopener noreferrer">
+        <img src="./vanderbilt-logo.png" alt="Vanderbilt University logo" width="512" height="512">
+        <span><small>PUBLISHED · YOUNG SCIENTIST JOURNAL, VANDERBILT UNIVERSITY · 2025</small><b>Enhancing AAC Systems Through Artificial Intelligence: Parent and Family Perspective on Limitations and Solutions</b></span>
+        <i aria-hidden="true">↗</i>
+      </a>
+      <ol class="rz-awards" data-awards></ol>
+    </section>
+
+    <section class="rz-section shell" aria-labelledby="edu-title">
+      <div class="rz-section-head"><div><p class="section-kicker">05 / EDUCATION</p><h2 id="edu-title">Where I learned it<span class="accent-dot">.</span></h2></div></div>
+      <div class="rz-edu" data-edu></div>
+    </section>
+
+    <section class="rz-end">
+      <div class="shell rz-end-inner">
+        <h2>Like what you see?<br><span>Let's talk.</span></h2>
+        <div><a class="resume-cta-btn" href="./index.html#contact">Send me a message <span aria-hidden="true">→</span></a><a class="rz-ghost" href="https://www.linkedin.com/in/aryav-dube/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="rz-tip" role="tooltip" id="rz-tip" data-tip-box hidden></div>
+  <dialog class="rz-dialog" data-dialog aria-labelledby="dlg-title"><div data-dialog-body></div></dialog>
+
+  <footer class="site-footer"><div class="shell footer-inner"><a class="footer-brand" href="./index.html">ARYAV DUBE<span>.</span></a><span>INTERACTIVE RESUME · UCLA LING + CS '29</span><span class="footer-links"><a href="https://www.linkedin.com/in/aryav-dube/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="./index.html">PORTFOLIO</a><a href="#main">TOP ↑</a></span></div></footer>
+</body>
+</html>
