@@ -29,25 +29,6 @@ python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-## Deploy to GitHub Pages
-
-1. Push this folder to a GitHub repository.
-2. Go to **Settings → Pages**, set **Source** to *Deploy from a branch*, and pick `main` with the `/ (root)` folder.
-3. The site goes live at `https://<username>.github.io/<repo>/`.
-
-Vercel and Netlify also work. Import the repo and leave the build command empty.
-
-## Contact form
-
-The form posts to [FormSubmit](https://formsubmit.co/) and delivers to `adube08@ucla.edu`, so no backend is needed.
-
-- **One-time activation:** the first submission sends an activation email to that inbox. Click **Activate Form**, and after that every message arrives normally.
-- **Validation:** the form includes a honeypot field for spam, and JavaScript validates it and shows status messages. Without JavaScript it falls back to a standard POST.
-- **Changing the recipient:** update the `action` and `data-ajax` attributes on `#contact-form` in `index.html`.
-
-## Editing the resume
-
-All resume content lives in the `items`, `awards`, `edu`, and `skills` arrays at the top of `resume.js`. Edit those arrays and the timeline, cards, tooltips, and dialogs update automatically. Durations for "Present" roles are calculated from today's date.
 
 ## Accessibility
 
